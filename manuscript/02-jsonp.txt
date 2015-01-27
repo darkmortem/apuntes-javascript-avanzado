@@ -105,25 +105,26 @@ Con esta tecnica/hack obtenemos el JSON pasado como parametro a una funcion que 
 
     [JQuery](http://learn.jquery.com/ajax/working-with-jsonp/) se encarga (de forma transparente al developer) de darle un [nombre a la funcion callback](https://github.com/jquery/jquery/blob/master/src/ajax/jsonp.js#L15), [pasarla en la peticion](https://github.com/jquery/jquery/blob/master/src/ajax/jsonp.js#L44), [crearla globalmente en el cliente](https://github.com/jquery/jquery/blob/master/src/ajax/jsonp.js#L60) y se encarga también de [añadir y eliminar el tag script](https://github.com/jquery/jquery/blob/master/src/core.js#L262) utilizado internamente
 
-    > [jsFiddle: Ejemplos JSONP jQuery](http://jsfiddle.net/juanma/az6rvze2/)  
-    > [jsFiddle: Ejemplo JSONP jQuery (Google Search Form)](http://jsfiddle.net/juanma/24o9jm8c/)  
+> [jsFiddle: Ejemplos JSONP jQuery](http://jsfiddle.net/juanma/az6rvze2/)  
+> [jsFiddle: Ejemplo JSONP jQuery (Google Search Form)](http://jsfiddle.net/juanma/24o9jm8c/)  
 
-      ```javascript
-     $.getJSON(
-        'http://ajax.googleapis.com/ajax/services/search/web?v=1.0&q=casas+alquiler&callback=?', 
-        function( googleResults) {
-            console.log ( "$.getJSON : %o", googleResults.responseData.results );
-        }
-    );
 
-    $.ajax({
-        url: "http://ajax.googleapis.com/ajax/services/search/web?v=1.0&q=casas+alquiler",
-        dataType: "jsonp",
-        success: function( response ) {
-            console.log ( "$.ajax minimal : %o", response.responseData.results );
-        }
-    });
-    ```
+```javascript
+$.getJSON(
+'http://ajax.googleapis.com/ajax/services/search/web?v=1.0&q=casas+alquiler&callback=?', 
+function( googleResults) {
+    console.log ( "$.getJSON : %o", googleResults.responseData.results );
+}
+);
+
+$.ajax({
+url: "http://ajax.googleapis.com/ajax/services/search/web?v=1.0&q=casas+alquiler",
+dataType: "jsonp",
+success: function( response ) {
+    console.log ( "$.ajax minimal : %o", response.responseData.results );
+}
+});
+```
 
 #### API's publicas
 

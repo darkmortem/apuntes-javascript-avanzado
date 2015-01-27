@@ -2,3 +2,6 @@
 01-same-origin-policy.txt
 02-jsonp.txt
 03-cors.txt
+04-this.txt
+05-prototype.txt
+06-herencia.txt
