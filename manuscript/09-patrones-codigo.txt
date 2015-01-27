@@ -213,7 +213,7 @@ Para mejorar la legibilidad las variables/métodos privados se marcan con “_�
 ## Métodos Privilegiados 
 _[creación de objetos]_
 
-> [[http://www.crockford.com/javascript/private.html](http://www.crockford.com/javascript/private.html)]([http://www.crockford.com/javascript/private.html](http://www.crockford.com/javascript/private.html))  
+> [http://www.crockford.com/javascript/private.html](http://www.crockford.com/javascript/private.html)
 
 Metodos Privilegiados (según Douglas Crockford) son métodos públicos que pueden acceder a métodos o propiedades privadas
 

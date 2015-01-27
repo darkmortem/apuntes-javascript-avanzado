@@ -250,10 +250,13 @@ myAnimator.stop();
 _[estructura, sub-classing, code re-use]_
 
 > [http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/#decoratorpatternjavascript](http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/#decoratorpatternjavascript)  
-- El patron Decorator se centra en cómo extender las funcionalidades de los objetos
-- Con el patrón Decorator podemos añadir/sobreescribir dinamicamente comportamiento a los métodos existentes de un objeto
+
+El patron Decorator se centra en cómo extender las funcionalidades de los objetos
+
+Con el patrón Decorator podemos añadir/sobreescribir dinamicamente comportamiento a los métodos existentes de un objeto
 
 _Ejemplo: Decorating Constructors With New Functionality_
+
 ```javascript
 // A vehicle constructor
 function vehicle( vehicleType ){
@@ -291,6 +294,7 @@ console.log( secondInstance );
 ```
 
 _Example 2: Decorating Objects With Multiple Decorators_
+
 ```javascript
 // The constructor to decorate
 function MacBook() {
