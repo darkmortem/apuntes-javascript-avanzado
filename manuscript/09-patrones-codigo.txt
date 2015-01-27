@@ -4,26 +4,28 @@ Estos patrones ayudan a organizar el código, a mejorar su performance, a la cre
 
 ## Separación de capas
 
-- Las 3 capas de una página web son 
-    - Content (HTML)
-    - Presentation (CSS)
-    - Behavior (JavaScript)
+Las 3 capas de una página web son 
 
-- Estas capas deben estar lo más separadas posibles, es decir no debemos tocar directamente desde una capa elementos pertenecientes a otra capa.
+- Content (HTML)
+- Presentation (CSS)
+- Behavior (JavaScript)
 
-    Esto, en la capa de comportamiento (Javascript) significa:
-    - Evitar los tags `<script>` con código javascript dentro del marcado (intentar utilizar sólo los que carguen otros archivos)
-    - Evitar attributos inline en las etiquetas como `onclick`, `onmouseover` etc.. (mejor capturar el evento desde un archivo externo utilizando los métodos `addEventListener` o `attachEvent)
-    - No alterar directamente propiedades del CSS (en todo caso, añadir o quitar clases)
-    - Añadir dinámicamente el marcado que no tenga sentido con el Javascript desactivado
-    - Que el código JS quede en archivos *.js separados que incluyamos en la página
+Estas capas deben estar lo más separadas posibles, es decir no debemos tocar directamente desde una capa elementos pertenecientes a otra capa.
+
+Esto, en la capa de comportamiento (Javascript) significa:
+
+- Evitar los tags `<script>` con código javascript dentro del marcado (intentar utilizar sólo los que carguen otros archivos)
+- Evitar attributos inline en las etiquetas como `onclick`, `onmouseover` etc.. (mejor capturar el evento desde un archivo externo utilizando los métodos `addEventListener` o `attachEvent)
+- No alterar directamente propiedades del CSS (en todo caso, añadir o quitar clases)
+- Añadir dinámicamente el marcado que no tenga sentido con el Javascript desactivado
+- Que el código JS quede en archivos *.js separados que incluyamos en la página
 
 ## Namespaces
 _[creación de objetos]_
 
-- Debemos evitar el uso de variables globales para minimizar las posibles colisiones de nombres de variable.
+Debemos evitar el uso de variables globales para minimizar las posibles colisiones de nombres de variable.
 
-- Una manera de hacer esto es utilizando un **Namespace**, es decir, creando un único objeto global y haciendo que todas las variables y funciones que necesitemos sean propiedades de este objeto
+Una manera de hacer esto es utilizando un **Namespace**, es decir, creando un único objeto global y haciendo que todas las variables y funciones que necesitemos sean propiedades de este objeto
 
 ```javascript
 // global namespace
@@ -47,7 +49,7 @@ MYAPP.dom = {};
 MYAPP.dom.style = {};
 ```
 
-- Podemos crear un método que nos ayude con la creación de elementos en el Namespace
+Podemos crear un método que nos ayude con la creación de elementos en el Namespace
 
 ```javascript
 var MYAPP = MYAPP || {};
@@ -71,7 +73,7 @@ true
 ## Init-time branching
 _[performance]_
 
-- Cuando sabemos que cierta condición no va a cambiar durante la ejecución del programa, podemos hacer que nuestro código evalué esa condición una sola vez (durante la carga del programa) y que devuelva funciones “customizadas” según estas condiciones (ej.- _Feature Detection_)
+Cuando sabemos que cierta condición no va a cambiar durante la ejecución del programa, podemos hacer que nuestro código evalué esa condición una sola vez (durante la carga del programa) y que devuelva funciones “customizadas” según estas condiciones (ej.- _Feature Detection_)
 
 ```javascript
 var MYAPP = {};
@@ -107,7 +109,7 @@ if (typeof window.addEventListener === 'function') {
 ## Lazy Definition 
 _[performance]_
 
-- La Lazy Definition es muy parecida al Init-time branching, con la diferencia es que aquí la “customización” se realiza solo cuando se llama a la función por primera vez
+La Lazy Definition es muy parecida al Init-time branching, con la diferencia es que aquí la “customización” se realiza solo cuando se llama a la función por primera vez
 
 ```javascript
 var MYAPP = {};
@@ -134,13 +136,14 @@ MYAPP.myevent = {
 ## Objeto de Configuración
 _[creación de objetos]_
 
-- Cuando una función necesita muchos parámetros (más de 3 por ejemplo) es una buena idea agruparlos en un objeto de configuración y utilizar éste como único parámetro (las propiedades del objeto serán los parámetros).  
+Cuando una función necesita muchos parámetros (más de 3 por ejemplo) es una buena idea agruparlos en un objeto de configuración y utilizar éste como único parámetro (las propiedades del objeto serán los parámetros).  
 
-- Algunas ventajas de utlizar un objeto de configuracion son:  
-    - El orden no importa  
-    - Puedes setear sólo los parámetros que necesites  
-    - La función queda más escalable  
-    - El código queda más legible (los nombres de las propiedades están presentes en la llamada)  
+Algunas ventajas de utlizar un objeto de configuracion son:  
+
+- El orden no importa  
+- Puedes setear sólo los parámetros que necesites  
+- La función queda más escalable  
+- El código queda más legible (los nombres de las propiedades están presentes en la llamada)  
 
 
 ```javascript
@@ -175,7 +178,7 @@ document.body.appendChild(oMyButton2);
 ## Propiedades y Métodos Privados 
 _[creación de objetos]_
 
-- Podemos definir propiedades/metodos privados en un objeto (aunque Javascript no tenga una sintaxis especial para ello) usando variables locales en la función constructora
+Podemos definir propiedades/metodos privados en un objeto (aunque Javascript no tenga una sintaxis especial para ello) usando variables locales en la función constructora
 
 ```javascript
 var MYAPP = {};
@@ -212,8 +215,10 @@ _[creación de objetos]_
 
 > [[http://www.crockford.com/javascript/private.html](http://www.crockford.com/javascript/private.html)]([http://www.crockford.com/javascript/private.html](http://www.crockford.com/javascript/private.html))  
 
-- Metodos Privilegiados (según Douglas Crockford) son métodos públicos que pueden acceder a métodos o propiedades privadas
+Metodos Privilegiados (según Douglas Crockford) son métodos públicos que pueden acceder a métodos o propiedades privadas
+
 Actuan de filtro para hacer accesible alguna funcionalidad privada pero de una manera controlada
+
 Son los metodos que definimos en la función constructora como parte del this, a diferencia de los metodos definidos en el prototipo.
 
 ```javascript
@@ -255,7 +260,8 @@ _[creación de objetos]_
 > [http://blog.alexanderdickson.com/javascript-revealing-module-pattern](http://blog.alexanderdickson.com/javascript-revealing-module-pattern)    
 > [http://blog.davidlitmark.com/post/6009004931/an-introduction-to-the-revealing-module-pattern](http://blog.davidlitmark.com/post/6009004931/an-introduction-to-the-revealing-module-pattern)    
 
-- Si queremos mantener intacta una función para nuestro “código interno”, pero también queremos dar visibilidad externa a esa función, podemos asignar esa función a una propiedad pública.
+Si queremos mantener intacta una función para nuestro “código interno”, pero también queremos dar visibilidad externa a esa función, podemos asignar esa función a una propiedad pública.
+
 A este patrón tambien se le conoce como **Revealing Module Pattern** 
 
 ```javascript
@@ -283,7 +289,8 @@ A este patrón tambien se le conoce como **Revealing Module Pattern**
 ## Funciones Inmediatas 
 _[creación de objetos]_
 
-- Otro patrón útil para crear objetos es utilizar una función anónima que devuelva un objeto y ejecutarla inmediatamente
+Otro patrón útil para crear objetos es utilizar una función anónima que devuelva un objeto y ejecutarla inmediatamente
+
 De esta manera las variables dentro de la función son locales (declaradas con var) y son destruidas cuando la función termina (siempre que no formen parte de un closure)
 
 ```javascript
@@ -305,6 +312,7 @@ MYAPP.dom = (function() {
 ```
 
 Otra manera de crear objetos es ejecutar directamente la función anónima y desde dentro hacer las asignaciones que correspondan.
+
 Podemos pasarle parámetros a esta función inmediata (normalmente relacionadas con el entorno) y hacer nuestro código más rápido y robusto 
 
 > [http://markdalgleish.com/2011/03/self-executing-anonymous-functions/](http://markdalgleish.com/2011/03/self-executing-anonymous-functions/)  
@@ -356,7 +364,8 @@ _[performance]_
 > [http://addyosmani.com/blog/faster-javascript-memoization/](http://addyosmani.com/blog/faster-javascript-memoization/)    
 > [http://philogb.github.com/blog/2008/09/05/memoization-in-javascript/](http://philogb.github.com/blog/2008/09/05/memoization-in-javascript/)    
 
-- Esta técnica se utiliza para cachear resultados de operaciones costosas.
+Esta técnica se utiliza para cachear resultados de operaciones costosas:
+
 - Si no se ha realizado aun la operación, se realiza y se guarda en caché (objeto o array) con un identificador único
 - Si ya se ha realizado, se devuelve el resultado directamente de la caché 
 
@@ -377,7 +386,8 @@ _[creación de objetos]_
 
 > [http://www.yuiblog.com/blog/2007/06/12/module-pattern/](http://www.yuiblog.com/blog/2007/06/12/module-pattern/)  
 
-- La idea del patrón modulo es la de encapsular la lógica privada y exponer solamente de terminados métodos “público”.
+La idea del patrón modulo es la de encapsular la lógica privada y exponer solamente de terminados métodos “público”.
+
 Se aplica utilizando funciones autoejecutables que devuelven objetos
 
 ```javascript
@@ -403,13 +413,15 @@ _[creación de objetos]_
 
 > [https://github.com/shichuan/javascript-patterns/blob/master/object-creation-patterns/sandbox.html](https://github.com/shichuan/javascript-patterns/blob/master/object-creation-patterns/sandbox.html)  
 
-- El patrón Sandbox soluciona dos problemas que hay con el patrón Namespce :
-  - No se pueden crear 2 versiones de la misma aplicación en la misma página ya que todo cuelga del mismo objeto global (`MYAPP`)
-  - Largas rutas a resolver (y que escribir) para acceder a los metodos
+El patrón Sandbox soluciona dos problemas que hay con el patrón Namespce :
+
+- No se pueden crear 2 versiones de la misma aplicación en la misma página ya que todo cuelga del mismo objeto global (`MYAPP`)
+- Largas rutas a resolver (y que escribir) para acceder a los metodos
 (`MYAPP.utilities.array)
 
-- El patrón Sandbox utiliza una función constructora global, en vez de un objeto “estático” global.
-- Al pasarle una función `fpCallback` a este constructor, se creará un objeto (box) donde esta función `fpCallback` tendrá disponible los metodos que necesita.
+El patrón Sandbox utiliza una función constructora global, en vez de un objeto “estático” global.
+
+Al pasarle una función `fpCallback` a este constructor, se creará un objeto (box) donde esta función `fpCallback` tendrá disponible los metodos que necesita.
 
 ```javascript
 function Sandbox() {

@@ -60,13 +60,15 @@ _[creación de objetos]_
 > [http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/#factorypatternjavascript](http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/#factorypatternjavascript)  
 > [https://github.com/shichuan/javascript-patterns/blob/master/design-patterns/factory.html](https://github.com/shichuan/javascript-patterns/blob/master/design-patterns/factory.html)  
 
-- El objetivo de este patrón es el de crear objetos
-- En vez de crear objetos directamente con new, utilizaremos un objeto Factory al que le pediremos que tipo de objeto queremos y éste objeto lo instanciará y nos lo devolverá
-- Este patrón es util en las siguientes situaciones:
-    - Cuando necesitamos repetir operaciones al crear objetos similares
-    - Cuando necesitamos generar diferentes instancias de objetos dependiendo del entorno
-    - Cuando trabajamos con pequeños objetos o componentes que comparten las mismas
-    propiedades
+El objetivo de este patrón es el de crear objetos
+
+En vez de crear objetos directamente con new, utilizaremos un objeto Factory al que le pediremos que tipo de objeto queremos y éste objeto lo instanciará y nos lo devolverá
+
+Este patrón es util en las siguientes situaciones:
+
+- Cuando necesitamos repetir operaciones al crear objetos similares
+- Cuando necesitamos generar diferentes instancias de objetos dependiendo del entorno
+- Cuando trabajamos con pequeños objetos o componentes que comparten las mismas propiedades
 
 ```javascript
 // Types.js - Constructors used behind the scenes
@@ -161,10 +163,11 @@ console.log( myBigTruck );
 
 > [https://github.com/shichuan/javascript-patterns/blob/master/design-patterns/iterator.html](https://github.com/shichuan/javascript-patterns/blob/master/design-patterns/iterator.html)  
 
-- El objetivo de este patrón es el de encapsular la lógica para recorrer los datos de un objeto
-- En el patron Iterator nuestro objeto necesita proporcionar un metodo next() que nos
-devuelva el siguiente elemento de la secuencia
-- Tambien se suele proporcionar en este objeto el método hasNext() para verificar si hemos llegado al final de la secuencia de datos
+El objetivo de este patrón es el de encapsular la lógica para recorrer los datos de un objeto
+
+En el patron Iterator nuestro objeto necesita proporcionar un metodo next() que nos devuelva el siguiente elemento de la secuencia
+
+Tambien se suele proporcionar en este objeto el método hasNext() para verificar si hemos llegado al final de la secuencia de datos
 
 ```javascript
 var agg = (function () {
@@ -199,8 +202,9 @@ _[estructura, sub‐classing, code re‐use]_
 
 > [http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/#mixinpatternjavascript](http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/#mixinpatternjavascript)  
 
-- Los Mixins son una manera de recolectar funcionalidades a traves de las extensiones
-- Los Mixins los podemos considerar objetos cuyos atributos y metodos pueden ser compartidos por otros objetos prototipos.
+Los Mixins son una manera de recolectar funcionalidades a traves de las extensiones
+
+Los Mixins los podemos considerar objetos cuyos atributos y metodos pueden ser compartidos por otros objetos prototipos.
 
 ```javascript
 var myMixins = {
@@ -332,7 +336,7 @@ console.log( mb.screenSize() );
 
 ## Patrón Façade
 
-- El objetivo del patron _Façade_ es simplificar la interfaz (los metodos/propiedades "públicos") ocultando el código complejo. Tambien se utiliza para desacoplar nuestro código de las API's de librerias externas
+El objetivo del patron _Façade_ es simplificar la interfaz (los metodos/propiedades "públicos") ocultando el código complejo. Tambien se utiliza para desacoplar nuestro código de las API's de librerias externas
 
 ```javascript
 var addMyEvent = function( el,ev,fn ){
@@ -384,9 +388,9 @@ module.facade( {run: true, val:10} );
 > [http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/#observerpatternjavascript](http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/#observerpatternjavascript)  
 > [http://www.jspatterns.com/book/7/observer.html](http://www.jspatterns.com/book/7/observer.html)  
 
+El principal objetivo de este patrón es el de desacoplar las partes de un código.
 
-- El principal objetivo de este patrón es el de desacoplar las partes de un código.
-- En vez de tener un objeto llamando al método de otro objeto, con este patron un objeto se subscribe a la actividad de otro objeto y recibe una notificación cuando esta actividad se produce.
+En vez de tener un objeto llamando al método de otro objeto, con este patron un objeto se subscribe a la actividad de otro objeto y recibe una notificación cuando esta actividad se produce.
 
                                     Subscriber = Observer
                                     Publisher = Subject
@@ -495,8 +499,9 @@ joe.tweet("hated the paper today");
 > [http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/#mediatorpatternjavascript](http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/#mediatorpatternjavascript)    
 > [https://github.com/shichuan/javascript-patterns/blob/master/design-patterns/mediator.html](https://github.com/shichuan/javascript-patterns/blob/master/design-patterns/mediator.html)    
 
-- El patrón _Mediator_ es un patrón de comportamiento que nos permite utilizar una unica interfaz a traves de la cual se pueden comunciar las diferentes partes de un sistema (ej. torre control aeropuerto)
-- En Javascript este patron se suele implementar como un objeto compartido a traves del cual los otros objetos (modulos) de nuestro sistema se pueden comunicar (patron _Observer_ centralizado)
+El patrón _Mediator_ es un patrón de comportamiento que nos permite utilizar una unica interfaz a traves de la cual se pueden comunciar las diferentes partes de un sistema (ej. torre control aeropuerto)
+
+En Javascript este patron se suele implementar como un objeto compartido a traves del cual los otros objetos (modulos) de nuestro sistema se pueden comunicar (patron _Observer_ centralizado)
 
 ```javascript
 var mediator = (function(){
