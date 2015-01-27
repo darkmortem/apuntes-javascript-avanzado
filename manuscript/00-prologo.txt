@@ -1,6 +1,6 @@
 # Prologo
 
-Este repositorio contiene la **segunda parte** de los materiales que he ido realizando para diferentes trainings JAVASCRIPT impartidos desde 2010.
+Este libro contiene la **segunda parte** de los materiales que he ido realizando para diferentes trainings JAVASCRIPT impartidos desde 2010.
 
 Esta segunda parte abarca conceptos más avanzados de Javascript incluyen:
 
