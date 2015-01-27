@@ -500,6 +500,7 @@ joe.tweet("hated the paper today");
 ```
 
 ## Patrón Mediator
+
 > [http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/#mediatorpatternjavascript](http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/#mediatorpatternjavascript)    
 > [https://github.com/shichuan/javascript-patterns/blob/master/design-patterns/mediator.html](https://github.com/shichuan/javascript-patterns/blob/master/design-patterns/mediator.html)    
 
