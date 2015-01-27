@@ -6,13 +6,13 @@ Este repositorio contiene la **segunda parte** de los materiales que he ido real
 
 Esta segunda parte abarca conceptos más avanzados de Javascript incluyen:
 
-- problemas en conexiones a servidores y soluciones (Same-Origin Policy, JSONP, CORS)
-- javascript a fondo (scope, valor de this, prototype, contexto de ejecución)
-- javascript "orientado a objetos" (prototype, herencia)
-- cómo estructurar mejor tu codigo JS ( patrones de diseño y de codigo)
-- cómo testear tu codigo js (unit testings)
+- Peticiones de datos a servidores y soluciones (Same-Origin Policy, JSONP, CORS)
+- Javascript a fondo (scope, valor de this, prototype, contexto de ejecución)
+- Javascript "orientado a objetos" (prototype, herencia)
+- Cómo estructurar mejor tu codigo JS (patrones de diseño y de codigo)
+- Cómo testear tu codigo js (unit testings)
 
-Los conceptos cubiertos en este libro te permitiran que tu código JS sea orientado a objetos, testado, escalable y más organizado. 
+Los conceptos cubiertos en este libro te permitiran que tu código JS sea orientado a objetos, testado, escalable, más comprensible y más organizado. 
 
 ## Contenidos ##
 

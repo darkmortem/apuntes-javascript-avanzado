@@ -1,0 +1,38 @@
+# Prologo
+
+Este repositorio contiene la **segunda parte** de los materiales que he ido realizando para diferentes trainings JAVASCRIPT impartidos desde 2010.
+
+Esta segunda parte abarca conceptos más avanzados de Javascript incluyen:
+
+- Peticiones de datos a servidores y soluciones (Same-Origin Policy, JSONP, CORS)
+- Javascript a fondo (scope, valor de this, prototype, contexto de ejecución)
+- Javascript "orientado a objetos" (prototype, herencia)
+- Cómo estructurar mejor tu codigo JS (patrones de diseño y de codigo)
+- Cómo testear tu codigo js (unit testings)
+
+Los conceptos cubiertos en este libro te permitiran que tu código JS sea orientado a objetos, testado, escalable, más comprensible y más organizado. 
+
+Espero que este libro te ayude a entender/implementar el codigo javascript que necesites.
+
+Cualquier feedback será bien recibido :)
+
+## Referencias
+
+Ademas de los enlaces reflejados, este material está basado en los siguientes libros:
+
+- [JavaScript: The Good Parts by Douglas Crockford](http://www.amazon.es/JavaScript-Parts-Working-Shallow-Grain/dp/0596517742)
+- [Object-Oriented JavaScript by Stoyan Stefanov](http://www.amazon.es/Object-oriented-JavaScript-Second-Stefanov-Paperback/dp/B00HRDVRJG/)
+- [JavaScript Patterns by Stoyan Stefanov](http://www.amazon.es/JavaScript-Patterns-Stefanov-Stoyan-Paperback/dp/B00M0MDRQK)
+
+## Agradecimientos
+
+Gracias a [@gemmabeltra](https://twitter.com/gemmabeltra) por la super-portada del libro (...y por aguantarme en general)
+
+A [@amischol](https://twitter.com/amischol) por elevar mi nivel de javascript y el de todos los que hemos trabajado a su lado (cuando nosotros vamos, él ya tiene su chalet alli montado)
+
+A [@cvillu](https://twitter.com/cvillu) por animarme a escribir el libro y descubrirme LeanPub (South-Power!!!)
+
+A [@crossrecursion](https://twitter.com/crossrecursion) por nuestras charlas/reuniones hablando de Javascript (me excitas... intelectualmente)
+
+Y a [@softonic](http://www.twitter.com/softonic) por darme la oportunidad de impartir los trainings JS y rodearme de tanta gente crack en JavaScript. No hay universidad que me pueda enseñar lo que he podido aprender alli.
+ 
