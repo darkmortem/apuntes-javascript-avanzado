@@ -165,6 +165,7 @@ _… por tanto, para recorrer solamente las propiedades propias del objeto podem
   color = black
   someMethod = function () { return 1; }
 ```
+
 ###El metodo _isPrototypeOf()_
 
 Cada objeto dispone del método `isPrototypeOf()` que nos dice si un objeto en cuestión se está utilizando como prototipo de otro objeto
