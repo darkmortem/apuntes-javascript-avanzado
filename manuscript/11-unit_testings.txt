@@ -183,11 +183,10 @@ Un _Unit Testing_ en _jsTestDriver_ podria ser:
   };
 ```
 
-[JavaScript Testing with JSTestDriver | meri-stuff.blogspot.com.es](http://meri-stuff.blogspot.com.es/2012/01/javascript-testing-with-jstestdriver.html)
-- [Javascript Unittesting with js-test-driver](http://westhoffswelt.de/data/portfolio/pbcat_2010_javascript_unit_testing_with_js_test_driver.pdf)
-- [GettingStarted](http://code.google.com/p/js-test-driver/wiki/GettingStarted)
-- [TestCase](http://code.google.com/p/js-test-driver/wiki/TestCase)
-- [Assertions](http://code.google.com/p/js-test-driver/wiki/Assertions)
+A> → [JavaScript Testing with JSTestDriver | meri-stuff.blogspot.com.es](http://meri-stuff.blogspot.com.es/2012/01/javascript-testing-with-jstestdriver.html)
+A> → [GettingStarted w/ JS Test Driver| code.google.com](http://code.google.com/p/js-test-driver/wiki/GettingStarted)
+A> → [TestCase w/ JS Test Driver| code.google.com](http://code.google.com/p/js-test-driver/wiki/TestCase)
+A> → [Assertions w/ JS Test Driver| code.google.com](http://code.google.com/p/js-test-driver/wiki/Assertions)
 
 ###[QUnit](http://qunitjs.com/)
 
@@ -258,13 +257,11 @@ Un _Unit Testing_ en _QUnit_ podria ser:
   });
 ```
 
-Mas info:
-
-- [How to Test your JavaScript Code with QUnit](http://net.tutsplus.com/tutorials/javascript-ajax/how-to-test-your-javascript-code-with-qunit/)
-- [Asserts](http://api.qunitjs.com/category/assert/)
-- [Cookbook](http://qunitjs.com/cookbook/)
-- [QUnit, testeando nuestras aplicaciones Javascript](http://www.etnassoft.com/2011/02/01/qunit-testeando-nuestras-aplicaciones-javascript/)
-- [Getting Started With jQuery QUnit for Client-Side Javascript Testing](http://lostechies.com/chadmyers/2008/08/29/getting-started-with-jquery-qunit-for-client-side-javascript-testing/)
+A> → [How to Test your JavaScript Code with QUnit | code.tutsplus.com](http://net.tutsplus.com/tutorials/javascript-ajax/how-to-test-your-javascript-code-with-qunit/)
+A> → [Asserts | api.qunitjs.com](http://api.qunitjs.com/category/assert/)
+A> → [Cookbook | qunitjs.com](http://qunitjs.com/cookbook/)
+A> → [QUnit, testeando nuestras aplicaciones Javascript | etnassoft.com](http://www.etnassoft.com/2011/02/01/qunit-testeando-nuestras-aplicaciones-javascript/)
+A> → [Getting Started With jQuery QUnit for Client-Side Javascript Testing | lostechies.com](http://lostechies.com/chadmyers/2008/08/29/getting-started-with-jquery-qunit-for-client-side-javascript-testing/)
 
 ###[Jasmine](http://pivotal.github.com/jasmine/)
 
@@ -355,22 +352,16 @@ Un _Unit Testing_ en _Jasmine_ podria ser:
   });
 ```
 
-Mas info:
-
-- [Magnum CI: The Jenkins Chronicles #1 – Intro to JsTestDriver](http://transitioning.to/2012/07/magnum-ci-the-jenkins-chronicles-1-intro-to-jstestdriver/)
-- [Testing Your JavaScript with Jasmine](http://net.tutsplus.com/tutorials/javascript-ajax/testing-your-javascript-with-jasmine/)
-- [Unit test JavaScript applications with Jasmine](http://www.adobe.com/devnet/html5/articles/unit-test-javascript-applications-with-jasmine.html)
+A> → [Magnum CI: The Jenkins Chronicles #1 – Intro to JsTestDriver | transitioning.to](http://transitioning.to/2012/07/magnum-ci-the-jenkins-chronicles-1-intro-to-jstestdriver/)
+A> → [Testing Your JavaScript with Jasmine | net.tutsplus.com](http://net.tutsplus.com/tutorials/javascript-ajax/testing-your-javascript-with-jasmine/)
+A> → [Unit test JavaScript applications with Jasmine | adobe.com](http://www.adobe.com/devnet/html5/articles/unit-test-javascript-applications-with-jasmine.html)
 
 ## Sinon
 
 Para testear ciertas partes del código necesitaremos "customizar" temporalmente algunos metodos y objetos.
 Sinon es una libreria que nos permite hacer "fake" de objetos (_spies_, _stubs_ y _mocks_)
 
-Mas info:
-
-- [Sinon JS](http://sinonjs.org/)
-- **[Talk: JavaScript QA utilizing UnitTests](http://westhoffswelt.de/data/portfolio/phpsummit_2011_11_javascript_qa_using_js_test_driver_and_sinon_js.pdf)**
-- **[Johansen Talk about Sinon](http://cjohansen.no/talks/2011/xp-meetup/#1)**
+A> → [Sinon JS | sinonjs.org](http://sinonjs.org/)
 
 ### Test Spies
 
@@ -415,7 +406,7 @@ Si aplicamos `sinon.spy` a un metodo existente, podremos ejecutarlo normalmente 
 
 Mas info:
 
-- [Test Spy](http://xunitpatterns.com/Test%20Spy.html)
+A> → [Test Spy | xunitpatterns.com](http://xunitpatterns.com/Test%20Spy.html)
 
 ### Test Stubs
 
