@@ -256,8 +256,8 @@ true
 
 _[creación de objetos]_
 
-A> → [Private Members in JavaScript | Douglas Crockford](http://www.crockford.com/javascript/private.html)
-A> → [JavaScript's Revealing Module Pattern | blog.alexanderdickson.com](http://blog.alexanderdickson.com/javascript-revealing-module-pattern)
+A> → [Private Members in JavaScript | Douglas Crockford](http://www.crockford.com/javascript/private.html)  
+A> → [JavaScript's Revealing Module Pattern | blog.alexanderdickson.com](http://blog.alexanderdickson.com/javascript-revealing-module-pattern)  
 
 Si queremos mantener intacta una función para nuestro “código interno”, pero también queremos dar visibilidad externa a esa función, podemos asignar esa función a una propiedad pública.
 

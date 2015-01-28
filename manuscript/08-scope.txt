@@ -51,12 +51,10 @@ var VO2 = {__parent__: VO1, ... other data}; -->
 // etc.
 ```
 
-A> → [Scope Chain | dmitrysoshnikov.com](http://dmitrysoshnikov.com/ecmascript/chapter-4-scope-chain)
-A> → [Functions Objects and Scope | p2pu.org](http://p2pu.org/en/groups/javascript-101/content/week2/)
-A> → [Javascript Scope and Binding | alternateidea.com](http://alternateidea.com/blog/articles/2007/7/18/javascript-scope-and-binding)
-A> → [Functions and functions scope | MDN](https://developer.mozilla.org/en/JavaScript/Reference/Functions_and_function_scope)
-
-<br/>
+A> → [Scope Chain | dmitrysoshnikov.com](http://dmitrysoshnikov.com/ecmascript/chapter-4-scope-chain)  
+A> → [Functions Objects and Scope | p2pu.org](http://p2pu.org/en/groups/javascript-101/content/week2/)  
+A> → [Javascript Scope and Binding | alternateidea.com](http://alternateidea.com/blog/articles/2007/7/18/javascript-scope-and-binding)  
+A> → [Functions and functions scope | MDN](https://developer.mozilla.org/en/JavaScript/Reference/Functions_and_function_scope)  
 
 ## Ciclo de vida de una Función ##
 

@@ -12,9 +12,9 @@ Los contextos de ejecución forman una pila.
 _Es decir, primero se ejecutará código global en su propio contexto de ejecución, este código puede llamar a una función que se ejecutará en su propio contexto de ejecución, y así sucesivamente_  
 Con cada nueva invocación a una función se entra en un nuevo contexto de ejecución  
 
-A> → [Activation Object & Variable Object | perfectionkills.com](http://perfectionkills.com/understanding-delete/#activation_object_variable_object)
-A> → [Execution Contexts | dmitrysoshnikov.com](http://dmitrysoshnikov.com/ecmascript/chapter-1-execution-contexts/)
-A> → [Functions and Execution Contexts | blog.tuenti.com](http://blog.tuenti.com/dev/functions-and-execution-contexts-in-javascript-2/)
+A> → [Activation Object & Variable Object | perfectionkills.com](http://perfectionkills.com/understanding-delete/#activation_object_variable_object)  
+A> → [Execution Contexts | dmitrysoshnikov.com](http://dmitrysoshnikov.com/ecmascript/chapter-1-execution-contexts/)  
+A> → [Functions and Execution Contexts | blog.tuenti.com](http://blog.tuenti.com/dev/functions-and-execution-contexts-in-javascript-2/)  
 
 ## Objeto Variable (Variable Object) ##
 
@@ -120,8 +120,8 @@ function foo(x, y, z) {
 foo(10, 20);
 ```
 
-A> → [Variable Object | dmitrysoshnikov.com](http://dmitrysoshnikov.com/ecmascript/chapter-2-variable-object)
-A> → [Execution context within JavaScript (Variable/Activation Object) | gist.github.com](https://gist.github.com/1525419)
+A> → [Variable Object | dmitrysoshnikov.com](http://dmitrysoshnikov.com/ecmascript/chapter-2-variable-object)  
+A> → [Execution context within JavaScript (Variable/Activation Object) | gist.github.com](https://gist.github.com/1525419)  
 
 ## Fases de Procesamiento del Código ##
 
@@ -313,9 +313,9 @@ Con esto, lo que hacemos en transformar manualmente la función en una _Function
 
 _… en el caso en que la función ya esté en una expression position, no hacen falta los paréntesis_
 
-A> → [Functions | dmitrysoshnikov.com](http://dmitrysoshnikov.com/ecmascript/chapter-5-functions/)
-A> → [Understanding Delete | perfectionkills.com](http://perfectionkills.com/understanding-delete/#activation_object_variable_object)
-A> → [Functions and Scope | MDN](https://developer.mozilla.org/en/JavaScript/Reference/Functions_and_function_scope)
+A> → [Functions | dmitrysoshnikov.com](http://dmitrysoshnikov.com/ecmascript/chapter-5-functions/)  
+A> → [Understanding Delete | perfectionkills.com](http://perfectionkills.com/understanding-delete/#activation_object_variable_object)  
+A> → [Functions and Scope | MDN](https://developer.mozilla.org/en/JavaScript/Reference/Functions_and_function_scope)  
 
 ## Hoisting ##
 
@@ -340,5 +340,5 @@ var myvar = 'my value';
 
 Es por esto, que se considera una buena practica en Javascript declarar todas las variables al principio de la función
 
-A> → [Hoisting Explained | net.tutsplus.com](http://net.tutsplus.com/tutorials/javascript-ajax/quick-tip-javascript-hoisting-explained/)
-A> → [Hoisting en Javascript | etnassoft.com](http://www.etnassoft.com/2010/12/26/hoisting-en-javascript/)
+A> → [Hoisting Explained | net.tutsplus.com](http://net.tutsplus.com/tutorials/javascript-ajax/quick-tip-javascript-hoisting-explained/)  
+A> → [Hoisting en Javascript | etnassoft.com](http://www.etnassoft.com/2010/12/26/hoisting-en-javascript/)  

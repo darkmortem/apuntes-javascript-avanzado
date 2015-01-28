@@ -61,12 +61,8 @@ function f2(){
 true
 ```
 
-More info:
-
-- [ECMAScript 5 support in Mozilla](https://developer.mozilla.org/en/JavaScript/ECMAScript_5_support_in_Mozilla)
-- [ECMA 262](http://www.ecma-­‐international.org/publications/files/ECMA-­‐ST/Ecma-­‐262.pdf)
-
-<br/>
+A> → [ECMAScript 5 support in Mozilla | MDN](https://developer.mozilla.org/en/JavaScript/ECMAScript_5_support_in_Mozilla)
+A> → [ECMA 262](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf)
 
 ##En un método de un objeto
 
@@ -103,8 +99,6 @@ true
 
 _… a `this se le asigna el objeto más “cercano“ (la referencia más inmediata)_
 
-<br/>
-
 ##En un metodo de un prototipo
 
 Si el método pertenece a un objeto que está **en la cadena de prototipos**, su `this` también se corresponderá con el objeto sobre el que se le llama
@@ -120,8 +114,6 @@ oInstance.b = 4;
 >>> oInstance.f() === 5
 true
 ```
-
-<br/>
 
 ##En una función constructora
 
@@ -163,8 +155,6 @@ true
 true
 ```
 
-<br/>
-
 ##Utilizando _call_ o _apply_
 
 Si en la llamada a la función utilizamos `call` o `apply`, podemos asociar `this` a un objeto determinado (que pasaremos como parámetro)
@@ -187,11 +177,9 @@ true
 true
 ```
 
-<br/>
+## Utilizando _bind_
 
-##Utilizando _bind_
-
-Tambien podemos hacer un [`bind`](http://www.robertsosinski.com/2009/04/28/binding-­‐scope-­‐in-­‐javascript/) a una función y asociarle de forma permanente como `this` el objeto que queramos (que utilizará siempre, independientemente de cómo se la llame)
+Tambien podemos hacer un [`bind`](http://www.smashingmagazine.com/2014/01/23/understanding-javascript-function-prototype-bind/) a una función y asociarle de forma permanente como `this` el objeto que queramos (que utilizará siempre, independientemente de cómo se la llame)
 
 ```javascript
 Function.prototype.bind = function(scope) {
@@ -217,8 +205,6 @@ true
 >>> eve.talk.call({name:"paco"},"HOLA") === "HOLA, my name is alice"
 true
 ```
-
-<br/>
 
 ##En una función asociada a un evento
 

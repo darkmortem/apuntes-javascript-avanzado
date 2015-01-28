@@ -1,8 +1,8 @@
 # JSONP
 
-A> → [Defining Safer JSON-P | json-p.org/](http://www.json-p.org/)  
+A> → [Defining Safer JSON-P | json-p.org](http://www.json-p.org/)  
 A> → [Remote JSON - JSONP | bob.ippoli.to](http://bob.ippoli.to/archives/2005/12/05/remote-json-jsonp/)  
-A> → [JSONP: How Does it Work? | http://johnnywey.com/](http://johnnywey.com/2012/05/20/jsonp-how-does-it-work/)
+A> → [JSONP: How Does it Work? | johnnywey.com](http://johnnywey.com/2012/05/20/jsonp-how-does-it-work/)
 
 [JSONP](http://es.wikipedia.org/wiki/JSONP) (_JSON con Padding_) es una _técnica_ mediante la que podemos obtener **y tratar** JSON desde otros dominios (desde javascript). 
 

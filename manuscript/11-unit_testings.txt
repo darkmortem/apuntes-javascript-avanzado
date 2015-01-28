@@ -1,8 +1,8 @@
 #Unit Testings en Javascript
 
 
-A> → [Desarrollo guiado por pruebas | wikipedia.org](http://es.wikipedia.org/wiki/Desarrollo_guiado_por_pruebas)
-A> → [Introduction To JavaScript Unit Testing | Smashing Magazine](http://coding.smashingmagazine.com/2012/06/27/introduction-to-javascript-unit-testing/)
+A> → [Desarrollo guiado por pruebas | wikipedia.org](http://es.wikipedia.org/wiki/Desarrollo_guiado_por_pruebas)  
+A> → [Introduction To JavaScript Unit Testing | Smashing Magazine](http://coding.smashingmagazine.com/2012/06/27/introduction-to-javascript-unit-testing/)  
 
 ## Unit Testings (pruebas unitarias)
 
@@ -183,10 +183,10 @@ Un _Unit Testing_ en _jsTestDriver_ podria ser:
   };
 ```
 
-A> → [JavaScript Testing with JSTestDriver | meri-stuff.blogspot.com.es](http://meri-stuff.blogspot.com.es/2012/01/javascript-testing-with-jstestdriver.html)
-A> → [GettingStarted w/ JS Test Driver| code.google.com](http://code.google.com/p/js-test-driver/wiki/GettingStarted)
-A> → [TestCase w/ JS Test Driver| code.google.com](http://code.google.com/p/js-test-driver/wiki/TestCase)
-A> → [Assertions w/ JS Test Driver| code.google.com](http://code.google.com/p/js-test-driver/wiki/Assertions)
+A> → [JavaScript Testing with JSTestDriver | meri-stuff.blogspot.com.es](http://meri-stuff.blogspot.com.es/2012/01/javascript-testing-with-jstestdriver.html)  
+A> → [GettingStarted w/ JS Test Driver| code.google.com](http://code.google.com/p/js-test-driver/wiki/GettingStarted)  
+A> → [TestCase w/ JS Test Driver| code.google.com](http://code.google.com/p/js-test-driver/wiki/TestCase)  
+A> → [Assertions w/ JS Test Driver| code.google.com](http://code.google.com/p/js-test-driver/wiki/Assertions)  
 
 ###[QUnit](http://qunitjs.com/)
 
@@ -257,11 +257,11 @@ Un _Unit Testing_ en _QUnit_ podria ser:
   });
 ```
 
-A> → [How to Test your JavaScript Code with QUnit | code.tutsplus.com](http://net.tutsplus.com/tutorials/javascript-ajax/how-to-test-your-javascript-code-with-qunit/)
-A> → [Asserts | api.qunitjs.com](http://api.qunitjs.com/category/assert/)
-A> → [Cookbook | qunitjs.com](http://qunitjs.com/cookbook/)
-A> → [QUnit, testeando nuestras aplicaciones Javascript | etnassoft.com](http://www.etnassoft.com/2011/02/01/qunit-testeando-nuestras-aplicaciones-javascript/)
-A> → [Getting Started With jQuery QUnit for Client-Side Javascript Testing | lostechies.com](http://lostechies.com/chadmyers/2008/08/29/getting-started-with-jquery-qunit-for-client-side-javascript-testing/)
+A> → [How to Test your JavaScript Code with QUnit | code.tutsplus.com](http://net.tutsplus.com/tutorials/javascript-ajax/how-to-test-your-javascript-code-with-qunit/)  
+A> → [Asserts | api.qunitjs.com](http://api.qunitjs.com/category/assert/)  
+A> → [Cookbook | qunitjs.com](http://qunitjs.com/cookbook/)  
+A> → [QUnit, testeando nuestras aplicaciones Javascript | etnassoft.com](http://www.etnassoft.com/2011/02/01/qunit-testeando-nuestras-aplicaciones-javascript/)  
+A> → [Getting Started With jQuery QUnit for Client-Side Javascript Testing | lostechies.com](http://lostechies.com/chadmyers/2008/08/29/getting-started-with-jquery-qunit-for-client-side-javascript-testing/)  
 
 ###[Jasmine](http://pivotal.github.com/jasmine/)
 
@@ -352,9 +352,9 @@ Un _Unit Testing_ en _Jasmine_ podria ser:
   });
 ```
 
-A> → [Magnum CI: The Jenkins Chronicles #1 – Intro to JsTestDriver | transitioning.to](http://transitioning.to/2012/07/magnum-ci-the-jenkins-chronicles-1-intro-to-jstestdriver/)
-A> → [Testing Your JavaScript with Jasmine | net.tutsplus.com](http://net.tutsplus.com/tutorials/javascript-ajax/testing-your-javascript-with-jasmine/)
-A> → [Unit test JavaScript applications with Jasmine | adobe.com](http://www.adobe.com/devnet/html5/articles/unit-test-javascript-applications-with-jasmine.html)
+A> → [Magnum CI: The Jenkins Chronicles #1 – Intro to JsTestDriver | transitioning.to](http://transitioning.to/2012/07/magnum-ci-the-jenkins-chronicles-1-intro-to-jstestdriver/)  
+A> → [Testing Your JavaScript with Jasmine | net.tutsplus.com](http://net.tutsplus.com/tutorials/javascript-ajax/testing-your-javascript-with-jasmine/)  
+A> → [Unit test JavaScript applications with Jasmine | adobe.com](http://www.adobe.com/devnet/html5/articles/unit-test-javascript-applications-with-jasmine.html)  
 
 ## Sinon
 
