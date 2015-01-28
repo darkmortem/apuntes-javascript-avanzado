@@ -1,44 +1,42 @@
 #Unit Testings en Javascript
 
 
-- [Test driven development with JavaScript](http://diigo.com/0toed)
-- [Desarrollo guiado por pruebas](http://es.wikipedia.org/wiki/Desarrollo_guiado_por_pruebas)
-- [Introduction To JavaScript Unit Testing](http://coding.smashingmagazine.com/2012/06/27/introduction-to-javascript-unit-testing/)
+A> → [Desarrollo guiado por pruebas | wikipedia.org](http://es.wikipedia.org/wiki/Desarrollo_guiado_por_pruebas)
+A> → [Introduction To JavaScript Unit Testing | Smashing Magazine](http://coding.smashingmagazine.com/2012/06/27/introduction-to-javascript-unit-testing/)
 
 ## Unit Testings (pruebas unitarias)
 
-- Un **[Unit testing](http://es.wikipedia.org/wiki/Unit_testing)** es un trozo de código que sirve para comprobar que otro trozo de código funciona correctamente.  Es código que sirve para testear otro código.
+Un **[Unit testing](http://es.wikipedia.org/wiki/Unit_testing)** es un trozo de código que sirve para comprobar que otro trozo de código funciona correctamente.  Es código que sirve para testear otro código.
 
-- Estas pruebas unitarias (unit testings) deben:
+Estas pruebas unitarias (unit testings) deben:
 
-    -  ser poder lanzadas de forma automática (esto es especialmente importante para una [integración continua](http://es.wikipedia.org/wiki/Integraci%C3%B3n_continua))
-    - testear la mayor cantidad de código posible ([cobertura de código](http://en.wikipedia.org/wiki/Code_coverage) más alta posible)
-    - ser poder ejecutadas infinidad de veces
-    - ser independientes, la ejecución de una prueba no debe afectar a la ejecución de otra.
-    - mantener la calidad de código (convención de código, buenas practicas, documentación,...)
+-  ser poder lanzadas de forma automática (esto es especialmente importante para una [integración continua](http://es.wikipedia.org/wiki/Integraci%C3%B3n_continua))
+- testear la mayor cantidad de código posible ([cobertura de código](http://en.wikipedia.org/wiki/Code_coverage) más alta posible)
+- ser poder ejecutadas infinidad de veces
+- ser independientes, la ejecución de una prueba no debe afectar a la ejecución de otra.
+- mantener la calidad de código (convención de código, buenas practicas, documentación,...)
 
-- Conforme va creciendo el código fuente de un proyecto se va haciendo más importante el poder comprobar de una manera sencilla que los cambios y el nuevo código no rompen nada del código existente
+Conforme va creciendo el código fuente de un proyecto se va haciendo más importante el poder comprobar de una manera sencilla que los cambios y el nuevo código no rompen nada del código existente
 
-- En el caso de Javascript esto es más importante, porque teniendo los tests podremos comprobar automaticamente que nuestro código funciona bien en diferentes entornos (IE, Firefox, Chrome,...)
+En el caso de Javascript esto es más importante, porque teniendo los tests podremos comprobar automaticamente que nuestro código funciona bien en diferentes entornos (IE, Firefox, Chrome,...)
 
-###El _unit_ (La unidad a testear)
+### El _unit_ (La unidad a testear)
 
-- En TDD, la unidad (el **unit**) es el trozo más pequeño de código que puede ser testeado. En la mayoria de los casos se corresponde con una función/método.
+En TDD, la unidad (el **unit**) es el trozo más pequeño de código que puede ser testeado. En la mayoria de los casos se corresponde con una función/método.
 
-- El **test** suele ser tambien un método/función asi que un test unitario sencillo suele ser un metódo (test) que testea otro metodo (unit)
+El **test** suele ser tambien un método/función asi que un test unitario sencillo suele ser un metódo (test) que testea otro metodo (unit)
 
-- A veces se escriben varios _unit tests_ para el mismo método/objeto de manera que cada uno testea un comportamiento específico. Estos tests que testean un conjunto de código relacionado (como un objeto con diferentes métodos) se suelen agrupar en un **test case**
+A veces se escriben varios _unit tests_ para el mismo método/objeto de manera que cada uno testea un comportamiento específico. Estos tests que testean un conjunto de código relacionado (como un objeto con diferentes métodos) se suelen agrupar en un **test case**
 
-- Los test cases se suelen agrupar a su vez en **test suites**
+Los test cases se suelen agrupar a su vez en **test suites**
 
-###Code coverage (Cobertura de código)
+### Code coverage (Cobertura de código)
 
-- El **code coverage** es una forma de medir que proporción del código fuente está siendo realmente testeanda por una _test suite_
+El **code coverage** es una forma de medir que proporción del código fuente está siendo realmente testeanda por una _test suite_
 
-- La cobertura del código se suele medir utilizando software que analiza el código y los tests. Para PHP se suele utilizar [PHPUnit](http://www.phpunit.de/manual/current/en/index.html) con [XDebug](http://www.xdebug.org/). Para JS, podemos utilizar [Sonar](http://blog.synyx.de/2012/08/visualize-javascript-code-quality-and-code-coverage-with-sonar/) con [jsTestDriver](http://code.google.com/p/js-test-driver/)
+La cobertura del código se suele medir utilizando software que analiza el código y los tests. Para PHP se suele utilizar [PHPUnit](http://www.phpunit.de/manual/current/en/index.html) con [XDebug](http://www.xdebug.org/). Para JS, podemos utilizar [Sonar](http://blog.synyx.de/2012/08/visualize-javascript-code-quality-and-code-coverage-with-sonar/) con [jsTestDriver](http://code.google.com/p/js-test-driver/)
 
-###Mi primer Unit Testing
-
+### Mi primer Unit Testing
 
 Este es el código a testear (el _'unit'_)
 
@@ -86,36 +84,35 @@ El ejemplo anterior no pasaba todos los tests, pero si mejoramos el código
 
 Este [nuevo código si que pasa los tests](http://www.cjohansen.no/en/tdd/test_driven_development_with_javascript_part_1/test2.html), es decir, que cumple con los criterios especificados en el test
 
-##TDD y BDD
+## TDD y BDD
 
 ###[Test Driven Development](http://en.wikipedia.org/wiki/Test-driven_development) (TDD)
 
-- **TDD** (Test Driven Development) es una metodología, forma de programar, un workflow, que basicamente consiste en hacer primero los tests (especificando lo que debe hacer nuestro código) y despues hacer el código que pase estos tests.
+→ **TDD** (Test Driven Development) es una metodología, forma de programar, un workflow, que basicamente consiste en hacer primero los tests (especificando lo que debe hacer nuestro código) y despues hacer el código que pase estos tests.
 
-- El workflow recomendado de TDD es el siguiente:  
+El workflow recomendado de TDD es el siguiente:  
 
-  1. Escribimos los tests para una nueva funcionalidad (asumiendo nombres de metodos, parametros de entrada, valores devueltos...)
-  1. Ejecutamos los tests y comprobamos que fallan (aun no hemos escrito el codigo a testear)
-  1. Escribimos la solución más simple que cumpla con los tests
-  1. Refactorizamos el código (código más limpio y eficiente y que siga pasando los tests)
-  1. Repetimos estos pasos con otra funcionalidad
+1. Escribimos los tests para una nueva funcionalidad (asumiendo nombres de metodos, parametros de entrada, valores devueltos...)
+1. Ejecutamos los tests y comprobamos que fallan (aun no hemos escrito el codigo a testear)
+1. Escribimos la solución más simple que cumpla con los tests
+1. Refactorizamos el código (código más limpio y eficiente y que siga pasando los tests)
+1. Repetimos estos pasos con otra funcionalidad
 
-- Aplicando TDD a la hora de programar nos permite centrarnos en la interfaz (API, methods, inputs & outputs) más que en los detalles de la implementación
+Aplicando TDD a la hora de programar nos permite centrarnos en la interfaz (API, methods, inputs & outputs) más que en los detalles de la implementación
 
 ###[Behavior Driven Development](http://en.wikipedia.org/wiki/Behavior-driven_development) (BDD)
 
-- **BDD** (Behavior Driven Development) es una versión especializada de TDD que se focaliza en testear (especificaciones de) comportamientos de un software
+→ **BDD** (Behavior Driven Development) es una versión especializada de TDD que se focaliza en testear (especificaciones de) comportamientos de un software
 
-- Utiliza un lenguaje más humano para escribir los tests y no se centra tanto en describir como debe funcionar la API sino en describir que una funcionalidad concreta haga lo que se espera de ella
+Utiliza un lenguaje más humano para escribir los tests y no se centra tanto en describir como debe funcionar la API sino en describir que una funcionalidad concreta haga lo que se espera de ella
 
 ## Testing Frameworks
 
-[Looking for a better JavaScript unit test tool](http://stackoverflow.com/questions/300855/looking-for-a-better-javascript-unit-test-tool)
+A> → [Looking for a better JavaScript unit test tool | stackoverflow.com](http://stackoverflow.com/questions/300855/looking-for-a-better-javascript-unit-test-tool)
 
+Existen unos [cuantos Frameworks](http://en.wikipedia.org/wiki/List_of_unit_testing_frameworks#JavaScript) que nos facilitan la tarea de realizar los tests a nuestro código.
 
-- Existen unos [cuantos Frameworks](http://en.wikipedia.org/wiki/List_of_unit_testing_frameworks#JavaScript) que nos facilitan la tarea de realizar los tests a nuestro código.
-
-- Estos frameworks ofrecen un numero determinado de [**assertions**](http://es.wikipedia.org/wiki/Aserci%C3%B3n_(inform%C3%A1tica)) (afirmaciones) con los que podremos escribir los tests
+Estos frameworks ofrecen un numero determinado de [**assertions**](http://es.wikipedia.org/wiki/Aserci%C3%B3n_(inform%C3%A1tica)) (afirmaciones) con los que podremos escribir los tests
 
 ###[jsTestDriver](http://code.google.com/p/js-test-driver/)
 
@@ -186,9 +183,7 @@ Un _Unit Testing_ en _jsTestDriver_ podria ser:
   };
 ```
 
-Mas info:
-
-- [JavaScript Testing with JSTestDriver](http://meri-stuff.blogspot.com.es/2012/01/javascript-testing-with-jstestdriver.html)
+[JavaScript Testing with JSTestDriver | meri-stuff.blogspot.com.es](http://meri-stuff.blogspot.com.es/2012/01/javascript-testing-with-jstestdriver.html)
 - [Javascript Unittesting with js-test-driver](http://westhoffswelt.de/data/portfolio/pbcat_2010_javascript_unit_testing_with_js_test_driver.pdf)
 - [GettingStarted](http://code.google.com/p/js-test-driver/wiki/GettingStarted)
 - [TestCase](http://code.google.com/p/js-test-driver/wiki/TestCase)

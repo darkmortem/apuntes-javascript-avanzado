@@ -1,5 +1,7 @@
 #El valor de _this_
 
+A> → [value of this | quirksmode.org](http://www.quirksmode.org/js/this.html)
+
 El valor `this` es una propiedad del _Contexto de Ejecución_
 
 ```
@@ -238,7 +240,3 @@ for(var i=0 ; i<elements.length ; i++){
   elements[i].addEventListener('click', bluify, false);
 }
 ```
-
-More info:
-
-- [value of this](http://www.quirksmode.org/js/this.html)

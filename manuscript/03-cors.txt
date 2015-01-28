@@ -1,8 +1,8 @@
 # CORS
 
-> [http://enable-cors.org/](http://enable-cors.org/)  
-> [http://www.nczonline.net/blog/2010/05/25/cross-domain-ajax-with-cross-origin-resource-sharing/](http://www.nczonline.net/blog/2010/05/25/cross-domain-ajax-with-cross-origin-resource-sharing/)  
-> [http://www.w3.org/TR/cors/](http://www.w3.org/TR/cors/)
+A> → [Enable cross](http://enable-cors.org/)  
+A> → [Cross-domain Ajax with Cross-Origin Resource Sharing | Nicholas C. Zakas](http://www.nczonline.net/blog/2010/05/25/cross-domain-ajax-with-cross-origin-resource-sharing/)  
+A> → [Cross-Origin Resource Sharing | w3.org](http://www.w3.org/TR/cors/)
 
 **Cross-Origin Resource Sharing** (CORS) permite realizar peticiones a otros dominios siempre y cuando el dominio de destino (servidor) esté de acuerdo en recibir peticiones del dominio de origen. 
 
@@ -12,18 +12,18 @@ Cada vez más [API's publicas](http://enable-cors.org/resources.html#apis) [perm
 
 ## Peticiones CORS sencillas
 
-- con **jQuery**
+### con **jQuery**
 
-    > [Ejemplo CORS request (HTML)](http://jsfiddle.net/juanma/rL7o58rr/)  
-    > [Ejemplo CORS request (JSON)](http://jsfiddle.net/juanma/w1bbehqz/)
+A> → [Ejemplo CORS request (HTML)](http://jsfiddle.net/juanma/rL7o58rr/)  
+A> → [Ejemplo CORS request (JSON)](http://jsfiddle.net/juanma/w1bbehqz/)
 
-    Una peticion CORS utilizando jQuery es, en la mayoria de los casos, transparente al cliente, ya que si [nuestro navegador lo soporta](https://test-cors.appspot.com/#technical) y el servidor (por ejemplo [GitHub](https://developer.github.com/v3/#cross-origin-resource-sharing)) está preparado, puede ser tan sencillo como esto:
+Una peticion CORS utilizando jQuery es, en la mayoria de los casos, transparente al cliente, ya que si [nuestro navegador lo soporta](https://test-cors.appspot.com/#technical) y el servidor (por ejemplo [GitHub](https://developer.github.com/v3/#cross-origin-resource-sharing)) está preparado, puede ser tan sencillo como esto:
 
-    ```javascript
-    $.ajax({
-        url: "https://api.github.com/users/juanmaguitar/repos",
-        success: function( response_json ) {
-            console.info (response_json);
-        }
-    });
-    ```
+```javascript
+$.ajax({
+    url: "https://api.github.com/users/juanmaguitar/repos",
+    success: function( response_json ) {
+        console.info (response_json);
+    }
+});
+```

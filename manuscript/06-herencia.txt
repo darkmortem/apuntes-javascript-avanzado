@@ -92,7 +92,7 @@ true
 ```
 
 Se recomienda mover a los prototipos todas las propiedades/métodos _reutilizables_, y
-dejar las _no-­reutilizables_ como propias de las instancias
+dejar las _no-reutilizables_ como propias de las instancias
 
 <br/>
 
