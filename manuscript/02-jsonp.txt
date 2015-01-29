@@ -106,8 +106,8 @@ loadScript ("my_script_tag_id", "http://ajax.googleapis.com/ajax/services/search
 
 [JQuery](http://learn.jquery.com/ajax/working-with-jsonp/) se encarga (de forma transparente al developer) de darle un [nombre a la funcion callback](https://github.com/jquery/jquery/blob/master/src/ajax/jsonp.js#L15), [pasarla en la peticion](https://github.com/jquery/jquery/blob/master/src/ajax/jsonp.js#L44), [crearla globalmente en el cliente](https://github.com/jquery/jquery/blob/master/src/ajax/jsonp.js#L60) y se encarga también de [añadir y eliminar el tag script](https://github.com/jquery/jquery/blob/master/src/core.js#L262) utilizado internamente
 
-A> → [jsFiddle: Ejemplos JSONP jQuery](http://jsfiddle.net/juanma/az6rvze2/)  
-A> → [jsFiddle: Ejemplo JSONP jQuery (Google Search Form)](http://jsfiddle.net/juanma/24o9jm8c/)  
+A> → [jsFiddle: Ejemplos JSONP jQuery](http://jsfiddle.net/juanma/az6rvze2/embedded/js,result/)  
+A> → [jsFiddle: Ejemplo JSONP jQuery (Google Search Form)](http://jsfiddle.net/juanma/24o9jm8c/embedded/js,result/)  
 
 ```javascript
 $.getJSON(

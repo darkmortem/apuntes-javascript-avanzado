@@ -14,8 +14,8 @@ Cada vez más [API's publicas](http://enable-cors.org/resources.html#apis) [perm
 
 ### con **jQuery**
 
-A> → [Ejemplo CORS request (HTML)](http://jsfiddle.net/juanma/rL7o58rr/)  
-A> → [Ejemplo CORS request (JSON)](http://jsfiddle.net/juanma/w1bbehqz/)
+A> → [Ejemplo CORS request (HTML)](http://jsfiddle.net/juanma/rL7o58rr/embedded/js,result/)  
+A> → [Ejemplo CORS request (JSON)](http://jsfiddle.net/juanma/w1bbehqz/embedded/js,result/)
 
 Una peticion CORS utilizando jQuery es, en la mayoria de los casos, transparente al cliente, ya que si [nuestro navegador lo soporta](https://test-cors.appspot.com/#technical) y el servidor (por ejemplo [GitHub](https://developer.github.com/v3/#cross-origin-resource-sharing)) está preparado, puede ser tan sencillo como esto:
 
