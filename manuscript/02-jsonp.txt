@@ -77,7 +77,7 @@ Por convención, el nombre de la función callback se especifica en un parámetr
 
 ### Con **código nativo**
 
-A> → [jsFiddle: Ejemplos JSONP con JS nativo](http://jsfiddle.net/juanma/uf31ps5e/)  
+A> → [jsFiddle: Ejemplos JSONP con JS nativo](http://jsfiddle.net/juanma/uf31ps5e/embedded/js,result/)  
 
 ```javascript
 window.do_things = function (data) {

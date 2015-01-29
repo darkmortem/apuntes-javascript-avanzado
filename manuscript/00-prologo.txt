@@ -4,7 +4,7 @@ Este libro contiene la **segunda parte** de los materiales que he ido realizando
 
 Esta segunda parte abarca conceptos más avanzados de Javascript incluyen:
 
-- Peticiones de datos a servidores y soluciones (Same-Origin Policy, JSONP, CORS)
+- Interactuación con API's externas (Same-Origin Policy, JSONP, CORS)
 - Javascript a fondo (scope, valor de this, prototype, contexto de ejecución)
 - Javascript "orientado a objetos" (prototype, herencia)
 - Cómo estructurar mejor tu codigo JS (patrones de diseño y de codigo)
