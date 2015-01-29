@@ -8,6 +8,7 @@ _[creación de objetos]_
 
 A> → [The Singleton Pattern | Addy Osmani](http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/#singletonpatternjavascript)    
 A> → [Patrones de Diseño en Javascript: El patrón Singleton | pixelovers.com](http://www.pixelovers.com/patrones-diseno-javascript-patron-singleton-1698384)    
+A> → [Alternatives to singletons in javascript | javascriptkata.com](http://www.javascriptkata.com/2010/10/20/alternatives-to-singletons-in-javascript/)  
 A> → [singleton - github shichuan](https://github.com/shichuan/javascript-patterns/blob/master/design-patterns/singleton.html)    
 
 La idea general de este patrón es la de asegurar que una clase genera una única instancia, es decir, limitar la instanciación de una clase a un único objeto
