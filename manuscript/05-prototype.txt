@@ -10,36 +10,39 @@ como si fueran propias.
 Las propiedades propias del objetos tienen prioridad sobre las propiedades del prototipo con el mismo nombre
 
 ```javascript
+function Person( gender ) { 
+	this.gender = gender; 
+	console.log (this.gender + ' instantiated'); 
+}
 
-  function Person(gender) {
-    this.gender = gender;
-    console.log (this.gender + ' instantiated');
-  }
-  
-  var person1 = new Person('Male');
-  var person2 = new Person('Female');
+var peter = new Person('Male');
+=> Male instantiated
 
-  >>> person1.gender === 'Male'
-  true
-  >>> person2.gender === 'Female'
-  true
+var mary = new Person('Female');
+=> Female instantiated
 
-  >>> Person.prototype.type = 'Human being';
+peter.gender === 'Male'
+=> true
+mary.gender === 'Female'
+=> true
 
-  >>> person1.type === 'Human being'
-  true
-  >>> person2.type === 'Human being'
-  true
+Person.prototype.type = 'Human being';
 
-  person1.type = 'Super Hero';
+peter.type === 'Human being'
+=> true
+mary.type === 'Human being'
+=> true
 
-  >>> person1.type === 'Super Hero'
-  true
-  >>> person2.type === 'Human being'
-  true
+peter.type = 'Super Hero';
 
+peter.type === 'Super Hero'
+=> true
+mary.type === 'Human being'
+=> true
 ```
-
+  
+A> [See example online](http://repl.it/91I)  
+  
 ###Cadena de Prototipos
 
 Los objetos disponen de lo que se llama la **cadena de prototipos**
@@ -52,186 +55,194 @@ Los objetos disponen de lo que se llama la **cadena de prototipos**
     
 ```javascript
 
-  function Person(gender) {
-    this.gender = gender;
-    this.shoutGender = function () {
-      return this.gender.toUpperCase();
-    }
-  }
-  
-  Person.prototype.sayGender = function() {
-    return this.gender;
-  };
-  
-  var person1 = new Person('Male');
-  
-  >>> person1.sayGender() === "Male"
-  true
-  >>> person1.shoutGender() === "MALE"
-  true
-  
-  >>> var genderTeller = person1.sayGender;
-  
-  >>> genderTeller() === "Male"
-  false
-  >>> genderTeller === person1.sayGender
-  true
-  >>> genderTeller === Person.prototype.sayGender
-  true
-  
-  >>> var Obj = {gender : 'Male'}
-  
-  >>> genderTeller.call(Obj) === "Male"
-  true
-    
-  >>> var person2 = new Person('Female');
-  >>> Person.prototype.shoutGender = function () {
-    return "From the Class, you’re " + this.gender.toUpperCase();
-  }
-  
-  >>> person1.shoutGender() === "MALE"
-  true
-  >>> person2.shoutGender() === "FEMALE"
-  true
-  
-  >>> delete person1.shoutGender
-  true
-  
-  >>> person1.shoutGender() === "MALE"
-  false
-  >>> person2.shoutGender() === "FEMALE"
-  true
-  >>> person1.shoutGender() === "From the Class, you’re MALE"
-  true
-  
-  >>> person1.shoutGender = function () {
-  return "I'm person1 and I’m " + this.gender.toUpperCase();
-  }
-  
-  >>> person1.shoutGender() === "From the Class, you’re MALE"
-  false
-  >>> person1.shoutGender() === "I'm person1 and I’m MALE"
-  true
-  >>> person2.shoutGender() === "FEMALE"
-  true
+function Person(gender) { 
+	this.gender = gender; 
+	this.shoutGender = function () { 
+		return this.gender.toUpperCase(); 
+	} 
+}
+
+Person.prototype.sayGender = function() { 
+	return this.gender; 
+};
+
+var eric = new Person('Male');
+
+eric.sayGender() === "Male"
+=> true
+eric.shoutGender() === "MALE"
+=> true
+
+var genderTeller = eric.sayGender;
+
+genderTeller() === "Male"
+=> false
+eric.sayGender() === "Male"
+=> true
+genderTeller === Person.prototype.sayGender
+=> true
+
+var Obj = {gender : 'Male'}
+
+genderTeller.call(Obj) === "Male"
+=> true
+
+var jessica = new Person('Female');
+Person.prototype.shoutGender = function () { 
+	return "From the Class, you’re " + this.gender.toUpperCase(); 
+}
+
+eric.shoutGender() === "MALE"
+=> true
+jessica.shoutGender() === "FEMALE"
+=> true
+
+delete eric.shoutGender
+=> true
+
+eric.shoutGender() === "MALE"
+=> false
+jessica.shoutGender() === "FEMALE"
+=> true
+eric.shoutGender() === "From the Class, you’re MALE"
+=> true
+
+eric.shoutGender = function () { 
+	return "I’m eric and I’m " + this.gender.toUpperCase(); 
+}
+
+eric.shoutGender() === "From the Class, you’re MALE"
+=> false
+eric.shoutGender() === "I’m eric and I’m MALE"
+=> true
+jessica.shoutGender() === "FEMALE"
+=> true
 ```
   
+A> [See example online](http://repl.it/92T/2)  
+
+
 ###El metodo _hasOwnProperty()_
 
 Cuando recorremos un objeto con un for-in pasamos por:
 
-  - Las propiedades propias del objeto
-  - Todas las propiedades accesibles a través de la cadena de prototipos
+	- Las propiedades propias del objeto
+	- Todas las propiedades accesibles a través de la cadena de prototipos
     
 Con el método `hasOwnProperty()` podemos diferenciar las propiedades propias del objeto de las del prototipo
 
 ```javascript
-  function Gadget(name, color) {
-    this.name = name;
-    this.color = color;
-    this.someMethod = function(){return 1;}
-  }
-  
-  Gadget.prototype.price = 100;
-  Gadget.prototype.rating = 3;
-  
-  var newtoy = new Gadget('webcam', 'black');
-  
-  >>> for (var prop in newtoy) { console.log(prop + ' = ' +
-  newtoy[prop]); }
-  
-  name = webcam
-  color = black
-  someMethod = function () { return 1; }
-  price = 100
-  rating = 3
-  
-  >>> newtoy.hasOwnProperty('name');
-  true
-  
-  >>> newtoy.hasOwnProperty('price');
-  false
+function Smartphone(name, version) {
+	this.name = name;
+	this.version = version;
+ 	this.getVersion = function(){ return this.version;}
+}
+
+Smartphone.prototype.price = 100;
+=> 100
+Smartphone.prototype.rating = 3;
+=> 3
+
+var iphone = new Smartphone('iphone', '5');
+
+for (var prop in iphone) { console.log(prop + ' = ' + iphone[prop]); }
+=> name = iphone
+=> version = 5
+=> getVersion = function (){ return this.version;}
+=> price = 100
+=> rating = 3
+
+iphone.hasOwnProperty('name');
+=> true
+iphone.hasOwnProperty('price');
+=> false
 ```
 
 _… por tanto, para recorrer solamente las propiedades propias del objeto podemos hacer:_
 
 ```javascript
-  >>> for (var prop in newtoy) {
-  if (newtoy.hasOwnProperty(prop))
-  console.log(prop + ' = ' + newtoy[prop]);
-  }
-  
-  name = webcam
-  color = black
-  someMethod = function () { return 1; }
+for (var prop in iphone) {
+	if ( iphone.hasOwnProperty(prop) ) {
+		console.log(prop + ' = ' + iphone[prop]);
+	}
+}
+=> name = iphone
+=> version = 5
+=> getVersion = function (){ return this.version;}
 ```
+
+A> [See example online](http://repl.it/92Y/1)  
 
 ###El metodo _isPrototypeOf()_
 
 Cada objeto dispone del método `isPrototypeOf()` que nos dice si un objeto en cuestión se está utilizando como prototipo de otro objeto
 
 ```javascript
-  var monkey = {
-    hair: true,
-    feeds: 'bananas',
-    breathes: 'air'
-  };
+var monkey = {
+	hair: true,
+	feeds: 'bananas',
+	breathes: 'air'
+};
 
-  function Human(name) {
-    this.name = name;
-  }
+function Human(name) {
+	this.name = name;
+}
 
-  Human.prototype = monkey;
+Human.prototype = monkey;
 
-  >>> var george = new Human('George');
-  >>> monkey.isPrototypeOf(george)
-  true
+>>> var george = new Human('George');
+>>> monkey.isPrototypeOf(george)
+true
 ```
+
+A> [See example online](http://repl.it/921/1)  
 
 ###La propiedad _constructor_
 
 El `constructor` del objeto `prototype` de una función constructora (clase), apunta a la función constructora
 
-```javascript
-  >>> function Dog(){this.tail = true;}
-  
-  >>>> Dog.prototype.constructor === Dog
-  true
-  
-  >>>> Dog.prototype
-  Dog {}
-  
-  >>> var myDog = new Dog()
-  >>> myDog.__proto__
-  Dog {}
-  >>> myDog.__proto__.constructor === Dog
-  true
-```
 
+_Ejemplo en Firefox:
+
+```javascript
+>>> function Dog(){ this.tail = true; }
+
+>>>> Dog.prototype.constructor === Dog
+true
+
+>>>> Dog.prototype
+Dog {}
+
+>>> var myDog = new Dog()
+>>> myDog.__proto__
+Dog {}
+>>> myDog.__proto__.constructor === Dog
+true
+```
 
 ###Sustituyendo completamente el _prototype_
 
 La cadena de prototipos es dinámica excepto cuando sustituimos completamente el objeto `prototype`
 
 ```javascript
-  >>> function Dog(){this.tail = true;}
-  >>> var benji = new Dog();
-  >>> var rusty = new Dog();
-  
-  >>> typeof(benji.say) === "function"
-  false
-  
-  >>> Dog.prototype.say = function(){return 'Woof!';}
-  
-  >>> typeof(benji.say) === "function"
-  true
-  
-  >>> benji.constructor === Dog
-  true
-  >>> typeof(benji.constructor.prototype.say) === "function"
-  true
-  >>> benji.constructor.prototype.tail === undefined
-  true
+>>> function Dog(){this.tail = true;}
+>>> var benji = new Dog();
+>>> var rusty = new Dog();
+
+>>> typeof(benji.say) === "function"
+false
+
+>>> Dog.prototype.say = function(){return 'Woof!';}
+
+>>> typeof(benji.say) === "function"
+true
+
+>>> benji.constructor === Dog
+true
+>>> typeof(benji.constructor.prototype.say) === "function"
+true
+>>> benji.constructor.prototype.tail === undefined
+true
 ```
 
 _Si reescribimos el `prototype`

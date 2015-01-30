@@ -66,7 +66,7 @@ A> → [ECMA 262](http://www.ecma-international.org/publications/files/ECMA-ST/E
 
 ##En un método de un objeto
 
-Cuando una función es llamada como **método de un objeto**, su this se corresponde con el objeto sobre el que se la llama
+Cuando una función es llamada como **método de un objeto**, su `this` se corresponde con el objeto sobre el que se la llama
 
 ```javascript
 var o = {
@@ -97,7 +97,7 @@ o.b = {g: independent, prop: 42};
 true
 ```
 
-_… a `this se le asigna el objeto más “cercano“ (la referencia más inmediata)_
+_… a `this` se le asigna el objeto más “cercano“ (la referencia más inmediata)_
 
 ##En un metodo de un prototipo
 
